@@ -12,9 +12,7 @@ body {
     color: #333;
     line-height: 1.6;
     background-image:url(images/bg5.png);
-    height: ;
-    width: ;
-    
+  
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -177,6 +175,7 @@ body {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
+    
 }
 
 .box {
