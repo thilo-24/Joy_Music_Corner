@@ -5,13 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Joy Music Corner</title>
         <link rel="stylesheet" href="styles/home.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
         <!-- Font Awesome CDN for Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="styles/login.css">
+        
+       
         <script defer src="script.js"></script>
-        <link rel="stylesheet" href="styles/ContactUs.css">
+        
     </head>
     
 <body>
+    <script>
+        <?php
+            session_start();
+            if (isset($_SESSION["success"])) {
+                echo "alert('" . $_SESSION["success"] . "');";
+                unset($_SESSION["success"]); // Clear the message after showing it
+            }
+
+            if (isset($_SESSION["error"])) {
+                echo "alert('" . $_SESSION["error"] . "');";
+                unset($_SESSION["error"]);
+            }
+        ?>
+    </script>
     <header class="header">
         <div class="logo">
             <img src="images/JOY.gif" alt="Joy Music Corner Logo" class="img-responsive">
@@ -20,97 +44,102 @@
             <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
             <a href="login.php"><i class="fas fa-user"></i> Login</a>
             <a href="products.html"><i class="fas fa-guitar"></i> Products</a>
-            <a href="Aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
-            <a href="ContactUs.html"><i class="fas fa-phone-alt"></i> Contact Us</a>
-            <a href="carts.html"><i class="fas fa-shopping-cart"></i></a>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contactus.html"><i class="fas fa-phone-alt"></i> Contact Us</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
         </nav>
     </header>
-    <style>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="forms-container">
+        <div class="signin-signup">
+            <form action="auth/user_login.php" method="POST" class="sign-in-form">
+    <h2 class="title">Sign In</h2>
+    <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" name="username" placeholder="Username" required>
+    </div>
+    <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <input type="password" name="password" placeholder="Password" required>
+    </div>
+    <input type="submit" value="Login" class="btn solid">
+</form>
 
+<form action="auth/user_registration.php" method="POST" class="sign-up-form">
+    <h2 class="title">Sign Up</h2>
+    <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" name="username" placeholder="Username" required>
+    </div>
+    <div class="input-field">
+        <i class="fas fa-envelope"></i>
+        <input type="email" name="email" placeholder="Email" required>
+    </div>
+    <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <input type="password" name="password" placeholder="Password" required>
+    </div>
+    <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+    </div>
+    <input type="submit" value="Sign Up" class="btn solid">
+</form>
 
-    </style>
+        </div>
+    </div>
+    
+    <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>New here?</h3>
+                <p>Join us and explore a world of opportunities!</p>
+                <button class="btn transparent" id="sign-up-btn">Sign Up</button>
+            </div>
+            <img src="images/signin.svg" class="image" alt="Sign Up Image">
+        </div>
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>Already a member?</h3>
+                <p>Sign in to continue your journey.</p>
+                <button class="btn transparent" id="sign-in-btn">Sign In</button>
+            </div>
+            <img src="images/signup.svg" class="image" alt="Sign In Image">
+        </div>
+    </div>
+</div>
+
 <script>
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    alert("Thank you for reaching out! We will respond to your message soon.");
-});
+    const signUpBtn = document.querySelector("#sign-up-btn");
+    const signInBtn = document.querySelector("#sign-in-btn");
+    const container = document.querySelector(".container");
 
+    signUpBtn.addEventListener("click", () => {
+        container.classList.add("sign-up-mode");
+    });
+
+    signInBtn.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode");
+    });
 </script>
 
 
 
-    <section class="contact-us">
-        <div class="form-container">
-            <div class="logo-container">
-                <img src="images/JOY (1).png" alt="Joy Music Corner Logo">
-            </div>
-            <h2>Contact Us</h2>
-            <p>We'd love to hear from you! Please fill out the form below to send your queries or feedback.</p>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Type your query or feedback..." required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Submit</button>
-            </form>
-        </div>
-    </section>
 
-    <section class="terms-conditions">
-        <h3>Terms and Conditions</h3>
-        <p>By using the Joy Music Corner services, you agree to adhere to our guidelines and respect our policies. </p>
-        <p>All customer inquiries will be addressed within 24-48 hours of submission.</p>
-        <p>Please ensure your provided details are accurate to avoid delays in communication. For more information, visit our <a href="#">Terms and Policies</a> page.</p>
-        <p>&copy; 2025 Joy Music Corner. All rights reserved.</p>
-    </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
     <footer class="footer">
         <div class="footer-container">

@@ -8,10 +8,11 @@
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #baedf1;
     color: #333;
     line-height: 1.6;
-    background-image:url(images/bg5.png);
+    background-image: url('../images/bg5.png');
+
   
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */

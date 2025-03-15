@@ -4,10 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Joy Music Corner</title>
-        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="styles/home.css">
         <!-- Font Awesome CDN for Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <script defer src="script.js"></script>
+        <link rel="stylesheet" href="styles/products.css">
     </head>
     
 <body>
@@ -17,7 +18,7 @@
         </div>
         <nav class="navbar">
             <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
-            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+            <a href="login.php"><i class="fas fa-user"></i> Login</a>
             <a href="products.html"><i class="fas fa-guitar"></i> Products</a>
             <a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
             <a href="contactus.html"><i class="fas fa-phone-alt"></i> Contact Us</a>
@@ -46,82 +47,6 @@
 
 
 
-    .products-section {
-        max-width: 90%;
-        margin: 50px auto;
-        position: relative;
-        overflow: hidden;
-      }
-
-
-
-    .products-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
-      }
-  
-      .product-box {
-        flex: 0 0 23%;
-        height: 350px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 15px;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        background-color: #f8f8f8;
-      }
-  
-      .product-box:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-      }
-  
-      .product-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-      }
-  
-      .product-box:hover .product-content {
-        opacity: 1;
-      }
-  
-      .product-content h3,
-      .product-content p {
-        color: #fff;
-        text-align: center;
-        margin: 10px 0;
-      }
-  
-      .product-content button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        background: #2575fc;
-        color: #fff;
-        font-size: 14px;
-        cursor: pointer;
-        transition: background 0.3s ease, transform 0.2s ease;
-      }
-  
-      .product-content button:hover {
-        background: #6a11cb;
-        transform: scale(1.05);
-      }
     </style>
   </head>
   <body>
@@ -245,7 +170,7 @@
         <!-- Guitar Products -->
         <h2>Guitars</h2><br>
         <div class="products-container">
-          <div class="product-box" style="background-image: url('https://www.jhs.co.uk/cdn/shop/products/LV36BL_1024x.jpg?v=1665137071');">
+          <div class="product-box" style="background-image: url('https://rvb-img.reverb.com/image/upload/s--RUfTyR_j--/f_auto,t_large/v1726587609/ewgzle3wwznowzgtzphr.jpg');">
             <div class="product-content">
               <h3>Smart Electric Guitar</h3>
               <h3>500,000 LKR</h3>
@@ -358,7 +283,7 @@
 
         <h2>Drums</h2> <br>
 <div class="products-container">
-  <div class="product-box" style="background-image: url('https://pbhmusicgroup.com/cdn/shop/products/1_cf9618af-0686-4b72-8bd0-1942cb843aee.jpg?v=1669528425');">
+  <div class="product-box" style="background-image: url('https://m.media-amazon.com/images/I/71HQVdUysqL.jpg');">
     <div class="product-content">
       <h3>Acoustic Drum Set</h3>
       <h3>150,000 LKR</h3>
@@ -374,7 +299,7 @@
       <button>Add to Cart</button>
     </div>
   </div>
-  <div class="product-box" style="background-image: url('https://lh6.googleusercontent.com/proxy/ugDR8C3_eFi7Y0HwpTzjMY6elffGMZQCu2rYPuf3LyNy_Hi6vAYXvOcdseeSgUUtmFCgTvZO15208G_TQaFDCbp99OsE6XyYEsPTs-j7kMN1xS_GxfjzXNOBfA');">
+  <div class="product-box" style="background-image: url('https://lh6.googleusercontent.com/proxy/ugDR8C3_eFi7Y0HwpTzjMY6elffGMZQCu2rYPuf3LyNy_Hi6vAYXvOcdseeSgUUtmFCgTvZO15208G_TQaFDCbp99OsE6XyYEsPTs-j7kMN1xS_https://static.wixstatic.com/media/ac2700_19e1a2d2c87646728f12851506459d05~mv2_d_1267_1200_s_2.png/v1/fill/w_560,h_478,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ac2700_19e1a2d2c87646728f12851506459d05~mv2_d_1267_1200_s_2.png');">
     <div class="product-content">
       <h3>Acrylic Cocktail Drum Set</h3>
       <h3>100,000 LKR</h3>
@@ -382,7 +307,7 @@
       <button>Add to Cart</button>
     </div>
   </div>
-  <div class="product-box" style="background-image: url('https://i.sstatic.net/INcSN.jpg');">
+  <div class="product-box" style="background-image: url('https://r2.gear4music.com/media/84/840156/600/preview.jpg');">
     <div class="product-content">
       <h3>Wooden Cajon Drum</h3>
       <h3>25,000 LKR</h3>
