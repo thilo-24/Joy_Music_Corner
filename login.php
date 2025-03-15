@@ -5,13 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Joy Music Corner</title>
         <link rel="stylesheet" href="styles/home.css">
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
-
-
         <!-- Font Awesome CDN for Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="styles/login.css">
@@ -36,25 +31,8 @@
             }
         ?>
     </script>
-    <header class="header">
-        <div class="logo">
-            <img src="images/JOY.gif" alt="Joy Music Corner Logo" class="img-responsive">
-        </div>
-        <nav class="navbar">
-            <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
-            <a href="login.php"><i class="fas fa-user"></i> Login</a>
-            <a href="products.html"><i class="fas fa-guitar"></i> Products</a>
-            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
-            <a href="contactus.html"><i class="fas fa-phone-alt"></i> Contact Us</a>
-            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-        </nav>
-    </header>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <?php include("./views/includes/header.php") ?>
+    <br><br><br><br><br>
 <div class="container">
     <div class="forms-container">
         <div class="signin-signup">
